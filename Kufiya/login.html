@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your Kufiya Dates account. Access your orders, addresses, and exclusive member benefits.">
+    <meta name="robots" content="noindex, follow">
+    <title>Login - Kufiya Dates UK</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="container navbar-container">
+                <a href="index.html" class="logo" aria-label="Kufiya Dates Home">
+                    <span class="logo-text">Kufiya</span>
+                    <span class="logo-highlight">Dates</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="shop.html" class="nav-link" role="menuitem">Shop</a></li>
+                    <li role="none"><a href="wholesale.html" class="nav-link" role="menuitem">Wholesale</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-button" aria-label="Shopping cart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"/>
+                            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"/>
+                            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"/>
+                        </svg>
+                        <span class="cart-count" data-count="0">0</span>
+                    </a>
+                    
+                    <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
+                        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="auth-main">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1>Welcome Back</h1>
+                    <p>Login to your account to access your orders and exclusive benefits</p>
+                </div>
+
+                <form id="login-form" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            autocomplete="email"
+                            aria-describedby="email-error"
+                        >
+                        <span class="error-message" id="email-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                required 
+                                autocomplete="current-password"
+                                aria-describedby="password-error"
+                            >
+                            <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                                <svg class="eye-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 10s3-6 9-6 9 6 9 6-3 6-9 6-9-6-9-6z"/>
+                                    <circle cx="10" cy="10" r="3"/>
+                                </svg>
+                                <svg class="eye-off-icon hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13.875 13.875A8.5 8.5 0 016.125 6.125m11.75 11.75l-11.75-11.75m5.5 3.75a3 3 0 014.5 4.5M1 10s3-6 9-6c1.5 0 2.85.375 4.05 1.05M19 10s-1.5 3-4.5 4.95"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="error-message" id="password-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember" id="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="forgot-password.html" class="link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full btn-large">
+                        <span class="btn-text">Login</span>
+                        <span class="btn-loader hidden">
+                            <span class="spinner"></span>
+                        </span>
+                    </button>
+
+                    <div class="form-divider">
+                        <span>OR</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5556 10.2222C19.5556 9.45556 19.4889 8.93333 19.3444 8.38889H10V11.6111H15.5111C15.3778 12.6 14.7333 14.0667 13.3667 15.0667L13.3496 15.1786L15.9871 17.2246L16.1778 17.2444C17.9333 15.6222 19.5556 13.1556 19.5556 10.2222Z" fill="#4285F4"/>
+                                <path d="M10 20C12.4889 20 14.5667 19.1778 16.1778 17.2444L13.3667 15.0667C12.6 15.6 11.5778 16 10 16C7.55556 16 5.48889 14.3778 4.74444 12.0889L4.63642 12.098L1.90775 14.2245L1.87036 14.3274C3.33333 17.2222 6.42222 20 10 20Z" fill="#34A853"/>
+                                <path d="M4.74444 12.0889C4.54444 11.5111 4.43333 10.8889 4.43333 10.2444C4.43333 9.6 4.54444 8.97778 4.73333 8.4L4.72807 8.27872L1.96356 6.11743L1.87036 6.16104C1.24444 7.40548 0.888889 8.78881 0.888889 10.2444C0.888889 11.7 1.24444 13.0833 1.87036 14.3274L4.74444 12.0889Z" fill="#FBBC05"/>
+                                <path d="M10 4.48889C11.9111 4.48889 13.2556 5.27778 14.0889 5.93333L16.2444 3.84444C14.5556 2.38889 12.4889 1.5 10 1.5C6.42222 1.5 3.33333 4.27778 1.87036 7.17222L4.73333 9.41111C5.48889 7.12222 7.55556 4.48889 10 4.48889Z" fill="#EB4335"/>
+                            </svg>
+                            <span>Continue with Google</span>
+                        </button>
+                        <button type="button" class="social-btn facebook-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M20 10C20 4.477 15.523 0 10 0S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                            </svg>
+                            <span>Continue with Facebook</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html" class="link">Register here</a></p>
+                </div>
+            </div>
+
+            <div class="auth-benefits">
+                <h2>Member Benefits</h2>
+                <ul class="benefits-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z"/>
+                        </svg>
+                        <span>Exclusive member discounts</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M3 1h14l-1 14H4L3 1zm0 0H1m4 14h10m-8 3a1 1 0 100-2 1 1 0 000 2zm6 0a1 1 0 100-2 1 1 0 000 2z"/>
+                        </svg>
+                        <span>Track your orders easily</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM3 18v-2a4 4 0 014-4h2a4 4 0 014 4v2M13 7a3 3 0 100-6 3 3 0 000 6z"/>
+                        </svg>
+                        <span>Save multiple delivery addresses</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M3 8V4a2 2 0 012-2h10a2 2 0 012 2v4m-2 5h.01M7 13h10a2 2 0 012 2v3a2 2 0 01-2 2H3a2 2 0 01-2-2v-3a2 2 0 012-2h10z"/>
+                        </svg>
+                        <span>Early access to new products</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Kufiya Dates UK</h3>
+                    <p>Premium Jordanian Medjool dates imported and distributed across the United Kingdom by Farah Import & Export Ltd.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns Policy</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Stay Connected</h3>
+                    <form class="newsletter-form" action="/subscribe" method="POST">
+                        <input type="email" name="email" placeholder="Your email address" required aria-label="Email for newsletter">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 Kufiya Dates UK - Farah Import & Export Ltd. All rights reserved.</p>
+                    <p>Registered in England & Wales | Company No: 12345678 | VAT No: GB123456789</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

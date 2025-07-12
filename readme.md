@@ -1,0 +1,1 @@
+my websites are here to help claude see them and use them for projects knowledge.
