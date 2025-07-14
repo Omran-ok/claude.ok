@@ -1,0 +1,610 @@
+/* ===============================================
+   Kufiya Dates - Wholesale Page Styles
+   Specific styles for the wholesale page
+   =============================================== */
+
+/* Wholesale Hero */
+.wholesale-hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-primary-red) 0%, var(--color-primary-red-dark) 100%);
+    color: white;
+    padding: var(--spacing-4xl) 0;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+}
+
+.hero-pattern {
+    width: 100%;
+    height: 100%;
+    background-image:
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .05) 35px, rgba(255, 255, 255, .05) 70px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255, 255, 255, .05) 35px, rgba(255, 255, 255, .05) 70px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: var(--font-size-5xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-xl);
+    opacity: 0.95;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.hero-features {
+    display: flex;
+    gap: var(--spacing-2xl);
+    justify-content: center;
+    margin: var(--spacing-2xl) 0;
+    flex-wrap: wrap;
+}
+
+.hero-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-base);
+    opacity: 0.9;
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: var(--spacing-4xl) 0;
+    background-color: var(--color-bg-secondary);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.benefit-card {
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-lg);
+    background-color: var(--color-primary-gold);
+    color: white;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.1);
+    background-color: var(--color-primary-red);
+}
+
+.benefit-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary-red);
+    margin-bottom: var(--spacing-md);
+}
+
+.benefit-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: var(--spacing-4xl) 0;
+    background-color: var(--color-bg-primary);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* Pricing Table */
+.pricing-table-container {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-bg-primary);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.pricing-table thead {
+    background-color: var(--color-primary-red);
+    color: white;
+}
+
+.pricing-table th {
+    padding: var(--spacing-lg);
+    text-align: left;
+    font-weight: 600;
+}
+
+.pricing-table td {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-table tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+.pricing-table tbody tr:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.pricing-table tr.featured {
+    background-color: rgba(255, 193, 7, 0.1);
+    font-weight: 600;
+}
+
+.pricing-table tr.featured td {
+    border-color: var(--color-primary-gold);
+}
+
+.price {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-primary-gold);
+}
+
+.savings {
+    color: var(--color-success);
+}
+
+.total-savings {
+    font-weight: 600;
+    color: var(--color-primary-red);
+}
+
+.pricing-notes {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.pricing-notes p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-secondary);
+}
+
+.pricing-notes strong {
+    color: var(--color-text-primary);
+}
+
+/* Partners Section */
+.partners-section {
+    padding: var(--spacing-4xl) 0;
+    background-color: var(--color-bg-secondary);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.partner-type {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.partner-type:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.partner-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-primary-red);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+}
+
+.partner-type:hover .partner-icon {
+    background-color: var(--color-primary-gold);
+    color: white;
+}
+
+.partner-type h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary-red);
+    margin-bottom: var(--spacing-md);
+}
+
+.partner-type p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Process Section */
+.process-section {
+    padding: var(--spacing-4xl) 0;
+    background-color: var(--color-bg-primary);
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.process-step {
+    flex: 1;
+    text-align: center;
+    padding: 0 var(--spacing-lg);
+    position: relative;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--color-primary-gold);
+    color: white;
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    position: relative;
+    z-index: 2;
+}
+
+.process-step h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary-red);
+    margin-bottom: var(--spacing-md);
+}
+
+.process-step p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.process-connector {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-border);
+    z-index: 1;
+}
+
+/* Inquiry Section */
+.inquiry-section {
+    padding: var(--spacing-4xl) 0;
+    background-color: var(--color-bg-secondary);
+}
+
+.inquiry-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+}
+
+.inquiry-header {
+    background-color: var(--color-primary-red);
+    color: white;
+    padding: var(--spacing-2xl);
+    text-align: center;
+}
+
+.inquiry-header h2 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.inquiry-header p {
+    opacity: 0.9;
+}
+
+/* Wholesale Form */
+.wholesale-form {
+    padding: var(--spacing-2xl);
+}
+
+.form-section {
+    margin-bottom: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-section h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary-red);
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-base);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: all var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary-gold);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.125rem;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: var(--spacing-3xl);
+}
+
+.success-message svg {
+    color: var(--color-success);
+    margin-bottom: var(--spacing-lg);
+}
+
+.success-message h3 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary-red);
+    margin-bottom: var(--spacing-lg);
+}
+
+.success-message p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.success-message a {
+    color: var(--color-primary-red);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.success-message a:hover {
+    text-decoration: underline;
+}
+
+/* Calculator Modal */
+.calculator-form {
+    padding: var(--spacing-xl);
+}
+
+.calculator-results {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.result-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    font-size: var(--font-size-lg);
+}
+
+.result-line.highlight {
+    font-weight: 700;
+    color: var(--color-success);
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-md) 0;
+    border-top: 2px solid var(--color-border);
+    margin-top: var(--spacing-sm);
+}
+
+.calculator-note {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-top: var(--spacing-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .wholesale-hero h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-features {
+        gap: var(--spacing-lg);
+    }
+
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .process-step {
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .process-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .wholesale-hero h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-table {
+        font-size: var(--font-size-sm);
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: var(--spacing-md);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .wholesale-form {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make pricing table responsive */
+    .pricing-table thead {
+        display: none;
+    }
+
+    .pricing-table tr {
+        display: block;
+        margin-bottom: var(--spacing-lg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: var(--spacing-md);
+    }
+
+    .pricing-table td {
+        display: block;
+        text-align: right;
+        padding: var(--spacing-sm);
+        border: none;
+    }
+
+    .pricing-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 600;
+        color: var(--color-text-secondary);
+    }
+}

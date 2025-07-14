@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your Kufiya Dates account. View orders, addresses, and account settings.">
+    <meta name="robots" content="noindex, follow">
+    <title>My Account - Kufiya Dates UK</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/account.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="container navbar-container">
+                <a href="index.html" class="logo" aria-label="Kufiya Dates Home">
+                    <span class="logo-text">Kufiya</span>
+                    <span class="logo-highlight">Dates</span>
+                </a>
+
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="shop.html" class="nav-link" role="menuitem">Shop</a></li>
+                    <li role="none"><a href="wholesale.html" class="nav-link" role="menuitem">Wholesale</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-button" aria-label="Shopping cart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" />
+                            <path
+                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" />
+                            <path
+                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" />
+                        </svg>
+                        <span class="cart-count" data-count="0">0</span>
+                    </a>
+
+                    <a href="account.html" class="account-button active" aria-label="My account">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </a>
+
+                    <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="account-main">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">My Account</li>
+                </ol>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="account-header">
+                <h1>My Account</h1>
+                <button class="btn btn-outline" id="logout-btn">Logout</button>
+            </div>
+
+            <div class="account-grid">
+                <!-- Account Sidebar -->
+                <aside class="account-sidebar">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="currentColor">
+                                <circle cx="30" cy="30" r="30" fill="var(--color-bg-secondary)" />
+                                <path
+                                    d="M30 30c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm0 5c-11.046 0-20 8.954-20 20h40c0-11.046-8.954-20-20-20z"
+                                    fill="var(--color-text-secondary)" />
+                            </svg>
+                        </div>
+                        <h2 id="user-name">Welcome back!</h2>
+                        <p id="user-email">customer@email.com</p>
+                    </div>
+
+                    <nav class="account-nav">
+                        <a href="#dashboard" class="nav-item active">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm1 6a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1H4zm9 0a1 1 0 00-1 1v5a1 1 0 001 1h3a1 1 0 001-1v-5a1 1 0 00-1-1h-3z" />
+                            </svg>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#orders" class="nav-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zm13 15.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                            <span>Orders</span>
+                        </a>
+                        <a href="#addresses" class="nav-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                            </svg>
+                            <span>Addresses</span>
+                        </a>
+                        <a href="#details" class="nav-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                            </svg>
+                            <span>Account Details</span>
+                        </a>
+                        <a href="#preferences" class="nav-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zm6 0a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zm5-1a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" />
+                            </svg>
+                            <span>Preferences</span>
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Account Content -->
+                <div class="account-content">
+                    <!-- Dashboard Section -->
+                    <section id="dashboard" class="content-section active">
+                        <h2>Dashboard</h2>
+
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3 3h18v4H3V3zm0 6h18v4H3V9zm0 6h18v4H3v-4z" />
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>Total Orders</h3>
+                                    <p class="stat-value">0</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>Loyalty Points</h3>
+                                    <p class="stat-value">0</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M21 18v1a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v1h-9a2 2 0 00-2 2v8a2 2 0 002 2h9zm-9-2h10V8H12v8zm4-2.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>Total Spent</h3>
+                                    <p class="stat-value">£0.00</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" />
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>Saved Addresses</h3>
+                                    <p class="stat-value">0</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recent-orders">
+                            <h3>Recent Orders</h3>
+                            <div class="empty-state">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="currentColor">
+                                    <path
+                                        d="M30 15a3 3 0 100-6 3 3 0 000 6zm-7.5 3a1.5 1.5 0 000 3h15a1.5 1.5 0 000-3h-15zm-3 7.5a1.5 1.5 0 011.5-1.5h18a1.5 1.5 0 010 3H21a1.5 1.5 0 01-1.5-1.5zM21 31.5a1.5 1.5 0 000 3h18a1.5 1.5 0 000-3H21zm-1.5 7.5a1.5 1.5 0 011.5-1.5h18a1.5 1.5 0 010 3H21a1.5 1.5 0 01-1.5-1.5z" />
+                                </svg>
+                                <p>No orders yet</p>
+                                <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Orders Section -->
+                    <section id="orders" class="content-section">
+                        <h2>Order History</h2>
+
+                        <div class="orders-filters">
+                            <select class="filter-select" id="order-filter">
+                                <option value="all">All Orders</option>
+                                <option value="processing">Processing</option>
+                                <option value="shipped">Shipped</option>
+                                <option value="delivered">Delivered</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+
+                        <div class="orders-list">
+                            <div class="empty-state">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="currentColor">
+                                    <path
+                                        d="M30 30c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm0 5c-11.046 0-20 8.954-20 20h40c0-11.046-8.954-20-20-20z" />
+                                </svg>
+                                <p>No orders found</p>
+                                <a href="shop.html" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Addresses Section -->
+                    <section id="addresses" class="content-section">
+                        <div class="section-header">
+                            <h2>Saved Addresses</h2>
+                            <button class="btn btn-primary" id="add-address-btn">Add New Address</button>
+                        </div>
+
+                        <div class="addresses-grid" id="addresses-list">
+                            <div class="empty-state">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="currentColor">
+                                    <path
+                                        d="M30 15c-5.523 0-10 4.477-10 10s10 20 10 20 10-14.477 10-20-4.477-10-10-10zm0 13.75a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z" />
+                                </svg>
+                                <p>No saved addresses</p>
+                                <button class="btn btn-primary"
+                                    onclick="document.getElementById('add-address-btn').click()">Add Address</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Account Details Section -->
+                    <section id="details" class="content-section">
+                        <h2>Account Details</h2>
+
+                        <form id="details-form" class="account-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+44">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth (Optional)</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth">
+                                <small>We'll send you special offers on your birthday!</small>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+
+                        <div class="password-section">
+                            <h3>Change Password</h3>
+                            <form id="password-form" class="account-form">
+                                <div class="form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" id="currentPassword" name="currentPassword" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" name="newPassword" required minlength="8">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm New Password</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                            </form>
+                        </div>
+                    </section>
+
+                    <!-- Preferences Section -->
+                    <section id="preferences" class="content-section">
+                        <h2>Preferences</h2>
+
+                        <div class="preferences-form">
+                            <h3>Email Notifications</h3>
+
+                            <label class="preference-option">
+                                <input type="checkbox" name="orderUpdates" checked>
+                                <div class="option-content">
+                                    <strong>Order Updates</strong>
+                                    <p>Receive emails about your order status</p>
+                                </div>
+                            </label>
+
+                            <label class="preference-option">
+                                <input type="checkbox" name="promotions" checked>
+                                <div class="option-content">
+                                    <strong>Promotions & Offers</strong>
+                                    <p>Be the first to know about special deals</p>
+                                </div>
+                            </label>
+
+                            <label class="preference-option">
+                                <input type="checkbox" name="newsletter" checked>
+                                <div class="option-content">
+                                    <strong>Newsletter</strong>
+                                    <p>Monthly updates about new products and recipes</p>
+                                </div>
+                            </label>
+
+                            <label class="preference-option">
+                                <input type="checkbox" name="sms">
+                                <div class="option-content">
+                                    <strong>SMS Notifications</strong>
+                                    <p>Receive text messages for important updates</p>
+                                </div>
+                            </label>
+
+                            <button class="btn btn-primary" id="save-preferences">Save Preferences</button>
+                        </div>
+
+                        <div class="danger-zone">
+                            <h3>Danger Zone</h3>
+                            <div class="danger-content">
+                                <div>
+                                    <h4>Delete Account</h4>
+                                    <p>Once you delete your account, there is no going back. Please be certain.</p>
+                                </div>
+                                <button class="btn btn-outline btn-danger" id="delete-account">Delete Account</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Kufiya Dates UK</h3>
+                    <p>Premium Jordanian Medjool dates imported and distributed across the United Kingdom by Farah
+                        Import & Export Ltd.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns Policy</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Stay Connected</h3>
+                    <form class="newsletter-form" action="/subscribe" method="POST">
+                        <input type="email" name="email" placeholder="Your email address" required
+                            aria-label="Email for newsletter">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 Kufiya Dates UK - Farah Import & Export Ltd. All rights reserved.</p>
+                    <p>Registered in England & Wales | Company No: 12345678 | VAT No: GB123456789</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Address Modal -->
+    <div class="modal" id="address-modal" role="dialog" aria-labelledby="address-modal-title" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="address-modal-title">Add New Address</h2>
+            <form id="address-form" class="modal-form">
+                <div class="form-group">
+                    <label for="addressLabel">Address Label (e.g., Home, Work)</label>
+                    <input type="text" id="addressLabel" name="addressLabel" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="addressFirstName">First Name</label>
+                        <input type="text" id="addressFirstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="addressLastName">Last Name</label>
+                        <input type="text" id="addressLastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address1">Address Line 1</label>
+                    <input type="text" id="address1" name="address1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address2">Address Line 2 (Optional)</label>
+                    <input type="text" id="address2" name="address2">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" id="postcode" name="postcode" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="defaultAddress">
+                        <span>Set as default address</span>
+                    </label>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeAddressModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Address</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/account.js" defer></script>
+</body>
+
+</html>
